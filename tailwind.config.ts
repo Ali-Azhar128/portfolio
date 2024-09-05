@@ -8,10 +8,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      screens: {
+        sm: '510px', // Change the sm breakpoint to 510px
+      },
+      colors: {
+        'primary-color': '#64ffda',
+        'heading-color': '#ccd6f6',
+      },
+      boxShadow: {
+        'custom-lg': '4px 4px #64ffda', // Custom shadow with solid color at bottom-left
       },
     },
   },

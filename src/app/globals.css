@@ -2,32 +2,346 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+
+/* Container for the heptagon and the letter */
+
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --overlay-color: #64ffda; /* Color without opacity */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+body{
+  background-color: #071a35;
+  font-family: 'Calibri', Arial, sans-serif; 
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.containerson {
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw !important;
+  background-color: #02091d;
+  margin: 0;
+  animation: hideContainer 1s forwards 3s;
+
+}
+
+
+
+/* SVG Heptagon */
+
+.hepta{
+  width: 40px;
+  height: 40px;
+}
+
+.hepta polygon {
+  stroke: #82f7e8;
+  stroke-width: 6; /* Increased stroke-width to make the polygon bold */
+  fill: none;
+}
+
+.hepta text {
+  font-weight: lighter;
+  font-size: 50px;
+  font-family: Arial, sans-serif;
+  fill: #82f7e8;
+  text-anchor: middle;
+  text-align: center;
+}
+
+
+.heptagon {
+
+  width: 40px;
+  height: 40px;
+  transform-origin: center;
+}
+
+
+@keyframes hideContainer {
+  from{
+    opacity: 1;
+  }
+  to{
+    opacity: 0;
+  }
+  
+}
+
+/* Animation to draw the heptagon */
+@keyframes drawHeptagon {
+  from {
+    stroke-dashoffset: 560;
+    /* Full length of the heptagon's perimeter */
+  }
+
+  to {
+    stroke-dashoffset: 0;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+/* Fade-in animation for the letter A */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  100% {
+    opacity: 1;
   }
 }
+
+@keyframes collapseHeptagon {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeText {
+  from{
+    font-size: 50px;
+    opacity: 1;
+  }
+  to{
+    font-size: 0px;
+    opacity: 0;
+  }
+}
+
+/* Apply animations to the SVG elements */
+.heptagon polygon {
+  
+  stroke: #82f7e8;
+  stroke-width: 6;
+  fill: none;
+  stroke-dasharray: 560;
+  /* Full length of the heptagon's perimeter */
+  stroke-dashoffset: 560;
+  transform-origin: center;
+  animation: drawHeptagon 3s forwards, collapseHeptagon 1s forwards 2.5s; /* 4.5s delay to start after drawHeptagon */
+}
+
+.heptagon text {
+  font-weight: lighter;
+  font-size: 50px;
+  font-family: Arial, sans-serif;
+  fill: #82f7e8;
+  text-anchor: middle;
+  text-align: center;
+  opacity: 0;
+  transform-origin: bottom right;
+  animation: fadeIn 1.5s forwards 1s, fadeText 1s forwards 2.5s; /* 4.5s delay to start after drawHeptagon */
+
+  /* Delay to start after the heptagon is drawn */
+}
+
+
+
+/* Animation for list items */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.right li {
+  opacity: 0;
+  animation: fadeInUp 1s forwards;
+  animation-iteration-count: 1;
+}
+
+.right li:nth-child(1) {
+  animation-delay: 3.5s;
+}
+
+.right li:nth-child(2) {
+  animation-delay: 3.55s;
+}
+
+.right li:nth-child(3) {
+  animation-delay: 3.60s;
+}
+
+.right li:nth-child(4) {
+  animation-delay: 3.65s;
+}
+
+.right li:nth-child(5) {
+  animation-delay: 3.7s;
+}
+
+
+.paused {
+  animation: none !important;
+  opacity: 1 !important;
+}
+
+.hidden1{
+  opacity: 0;
+  transition: all 1s;
+  padding-bottom: 0px;
+}
+.show1{
+  opacity: 1;
+  transition: transform 1s, opacity 1s;
+  transform: translateY(1rem);
+}
+
+.show1.logo:nth-child(1){
+  transition-delay: 200ms;
+}
+.show1.logo:nth-child(2){
+  transition-delay: 300ms;
+}
+.show1.logo:nth-child(3){
+  transition-delay: 400ms;
+}
+.show1.logo:nth-child(4){
+  transition-delay: 500ms;
+}
+.show1.logo:nth-child(5){
+  transition-delay: 600ms;
+}
+
+.animatedBtn:hover{
+  box-shadow: -4px 4px 10px rgba(100, 255, 218, 0.5); /* Shadow to the bottom-left with color #64ffda */
+}
+
+@keyframes fadeInSocials {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+  
+}
+
+.socialLinks{
+  opacity: 0;
+  animation: fadeInSocials 1s forwards 4.5s
+}
+
+.emailLink{
+  opacity: 0;
+  animation: fadeInSocials 1s forwards 4.5s
+}
+
+.img{
+  background-image: url('../assets/images/me.png');
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
+  mix-blend-mode: multiply;
+  position: relative;
+
+
+}
+
+.img:hover{
+  filter: grayscale(0);
+}
+
+.imageContainer::before{
+  content: '';
+  border-radius: 0.375rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: darken;
+  background-color: var(--overlay-color);
+  pointer-events: none; 
+}
+
+
+
+.imageContainer:hover::before{
+  background-color: transparent;
+  content: none;
+
+}
+
+.bigHeading{
+  line-height: 1.1;
+  font-size: clamp(40px, 8vw, 80px);
+}
+
+.smallHeading{
+  line-height: 0.9;
+  font-size: clamp(40px, 8vw, 80px);
+}
+
+.overlay {
+	border-image: linear-gradient(#64ffdb74, #64ffdb74) 0 fill;
+}
+
+@keyframes descFadeIn {
+  from{
+    opacity: 0;
+  }to{
+    opacity: 1;
+  }
+  
+}
+
+.desc{
+  animation: descFadeIn 700ms forwards
+}
+
+.opacity-transition {
+  transition: opacity 1s ease-in-out;
+  opacity: 1 !important;
+}
+
+
+
+
+.projectImgWrapper::before{
+  content: '';
+  border-radius: 0.375rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: multiply;
+  background-color: #63e8cf;
+  pointer-events: none; 
+  z-index: 1;
+  transition: all 200ms;
+}
+
+.projectImgWrapper img{
+  filter: grayscale(100%);
+  border-radius: 0.375rem;
+}
+
+.projectImgWrapper:hover::before{
+  background-color: transparent;
+}
+
+.projectImgWrapper img:hover{
+  filter: grayscale(0%);
+
+}
+
+
