@@ -29,7 +29,7 @@ const AboutWork = () => {
                        
                         
                         console.log(el.id, 'id')
-                    setId(el.id - 1)}} className={`${id === el.id - 1 ? 'border-primary-color' : 'border-[#233554]'} ${id === el.id - 1 ? 'text-primary-color' : 'text-[#8892af]'} min-w-fit  lg:border-l-2 lg:border-b-0 border-b-2 py-2 px-6 cursor-pointer hover:text-primary-color bg-transparent hover:bg-[#112240] transition-colors duration-150 font-mono text-sm font-thin`}>{el.name}</div>
+                    setId(el.id - 1)}} className={`${id === el.id - 1 ? 'border-primary-color' : 'border-[#233554]'} ${id === el.id - 1 ? 'text-primary-color' : 'text-[#8892af]'} min-w-fit lg:border-l-2 lg:border-b-0 border-b-2 py-2 whitespace-nowrap px-6 cursor-pointer hover:text-primary-color bg-transparent hover:bg-[#112240] transition-colors duration-150 font-mono text-sm font-thin`}>{el.name}</div>
             </li>
             })}
         </ul>
