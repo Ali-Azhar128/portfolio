@@ -5,6 +5,7 @@ import Hero from './Main/Hero'
 import AboutMe from './Main/AboutMe'
 import AboutWork from './Main/AboutWork'
 import MyWork from './Main/MyWork'
+import ContactMe from './ContactMe'
 
 const MainIntro = () => {
     useEffect(() => {
@@ -29,6 +30,7 @@ const MainIntro = () => {
         <AboutMe/>
         <AboutWork/>
         <MyWork/>
+        <ContactMe/>
     </div>
   )
 }

@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Calibre';
+  src: url('../assets/fonts/CalibreRegular.otf');
+}
+
+@font-face {
+  font-family: 'Calibre';
+  src: url('../assets/fonts/CalibreBold.otf');
+  font-weight: bold
+}
+@font-face {
+  font-family: 'Calibre';
+  src: url('../assets/fonts/CalibreSemibold.otf');
+  font-weight:600
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
 
 
@@ -119,6 +135,11 @@ body{
     font-size: 0px;
     opacity: 0;
   }
+}
+
+nav{
+  background-color: rgba(7, 26, 53, 0.85);
+  backdrop-filter: blur(10px);
 }
 
 /* Apply animations to the SVG elements */
@@ -342,6 +363,11 @@ body{
 .projectImgWrapper img:hover{
   filter: grayscale(0%);
 
+}
+
+.contactHeading{
+  font-size: clamp(40px, 8vw, 70px);
+  text-wrap: nowrap;
 }
 
 

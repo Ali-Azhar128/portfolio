@@ -1,6 +1,10 @@
+
 import AnimatedButton from "../AnimatedButton"
 
+
 const Hero = () => {
+    
+
   return (
     <div className="min-h-[95vh]">
         <div className='hidden1 logo text-primary-color font-mono font-extralight'>Hi, my name is</div>

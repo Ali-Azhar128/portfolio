@@ -1,10 +1,20 @@
 import React from 'react'
 import Heading from '../Heading'
 import { BiRightArrow } from "react-icons/bi";
+import { useRef, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { setRef, clearRef } from '@/app/GlobalRedux/Refs/refSlice';
 
 const AboutMe = () => {
+  const dispatch = useDispatch();
+  const sectionRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    dispatch(setRef({ key: 'section1', ref: sectionRef }));
+
+    return () => {dispatch(clearRef('section1'))}
+  }, [dispatch])
   return (
-    <div className='min-h-[90vh] flex flex-col items-start lg:flex-row lg:flex space-x-10 w-[85%] m-auto mt-6  space-y-6'>
+    <div ref={sectionRef} className='min-h-[90vh] flex flex-col items-start lg:flex-row lg:flex space-x-10 w-[85%] m-auto mt-6  space-y-6'>
       <div className='space-y-3 text-[#8892af] flex-1'>
         <Heading num='01.' heading='About Me'/>
         <p className='hidden1 logo'>

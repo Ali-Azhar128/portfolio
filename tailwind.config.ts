@@ -8,12 +8,19 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      boxShadowNavy: {
+        'custom-navy': '0 10px 30px -10px rgba(10, 25, 47, 0.85)',
+      },
+      fontFamily: {
+        'calibre': ['Calibre', 'sans-serif'],
+      },
       screens: {
         sm: '510px', // Change the sm breakpoint to 510px
       },
       colors: {
         'primary-color': '#64ffda',
         'heading-color': '#ccd6f6',
+        'navy-color': '#071a35'
       },
       boxShadow: {
         'custom-lg': '4px 4px #64ffda', // Custom shadow with solid color at bottom-left

@@ -35,7 +35,7 @@ const Hexagon = () => {
   }, []);
 
   return (
-    <div ref={containerRef} className="containerson absolute top-0">
+    <div ref={containerRef} className="containerson z-50 absolute top-0">
       <svg className="heptagon" viewBox="0 0 100 100">
         <polygon points="50,1 93,25 93,75 50,99 7,75 7,25" />
         <text x="50" y="50" dominantBaseline="middle" textAnchor="middle">A</text>

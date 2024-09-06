@@ -1,13 +1,22 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
+import { useDispatch } from 'react-redux';
+import { setRef, clearRef } from '@/app/GlobalRedux/Refs/refSlice';
 import Heading from '../Heading'
 import { BiRightArrow } from "react-icons/bi";
 import Exp from '@/data/WorkExp'
 
 const AboutWork = () => {
+  const dispatch = useDispatch();
+  const sectionRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    dispatch(setRef({ key: 'section2', ref: sectionRef }));
+
+    return () => {dispatch(clearRef('section4'))}
+  }, [dispatch])
     const [id, setId] = useState(0)
   return (
-    <div className='min-h-[90vh] flex flex-col items-start space-x-10 w-[85%] lg:w-[70%] mt-10 lg:mt-0 m-auto space-y-6'>
+    <div className='min-h-[90vh] flex flex-col items-start space-x-10 w-[85%] lg:w-[70%] mt-10 lg:mt-0 m-auto space-y-6' ref={sectionRef}>
         
       <div className='text-[#8892af] w-full'>
         <Heading num='02.' heading="Where I've Worked"/>

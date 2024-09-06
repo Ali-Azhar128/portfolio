@@ -23,7 +23,7 @@ const ProjectShowcase: React.FC<ProjectShowcaseProps> = ({ name, description, pa
   
 
         <div className="mt-14  grid grid-cols-12 relative min-h-[100%} flex items-center" >
-            <div className={`contentArea flex flex-col justify-center min-h-full md:h-fit box-border p-4 md:bg-transparent bg-[#112240] opacity-95 md:opacity-100 row-span-full absolute z-20 sm:col-start-1 sm:col-span-full  ${mdClasses} ${lgClasses} ${colSpanClasses} ${textAlignClasses}`}>
+            <div className={`contentArea flex flex-col justify-center min-h-full md:h-fit box-border p-4 md:bg-transparent bg-[#112240] opacity-90 md:opacity-100 row-span-full absolute z-20 sm:col-start-1 sm:col-span-full  ${mdClasses} ${lgClasses} ${colSpanClasses} ${textAlignClasses}`}>
                 <p className="text-primary-color text-xs font-mono mb-1">Featured Project</p>
                 <Link href={linkToProject} target="_blank" className="text-2xl font-bold text-heading-color mb-3 cursor-pointer hover:text-primary-color transition-colors duration-150">{name}</Link>
                 <div className="md:shadow-lg min-w-fit md:bg-[#112240] rounded-md md:py-6 md:px-4 text-[#8892af]">
