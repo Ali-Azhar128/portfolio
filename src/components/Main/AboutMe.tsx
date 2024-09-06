@@ -18,13 +18,13 @@ const AboutMe = () => {
       <div className='space-y-3 text-[#8892af] flex-1'>
         <Heading num='01.' heading='About Me'/>
         <p className='hidden1 logo'>
-        Hello! My name is Ali Azhar and I enjoy creating things that live on the internet. My interest in web development started back in 2020 when I decided to try editing custom Tumblr themes — turns out hacking together a custom reblog button taught me a lot about HTML & CSS!
+        Hello! I'm Ali Azhar, and I’m passionate about building interactive web experiences. My journey into web development began in 2021 when I dived into creating small projects and experimenting with frontend technologies. That first spark ignited my curiosity about how the web works, and now, I enjoy crafting websites and applications using modern tools like React, Vue, and more!
         </p>
         <p className='hidden1 logo'>
-        Fast-forward to today, and I’ve had the privilege of working at an advertising agency, a start-up, a huge corporation, and a student-led design studio. My main focus these days is building accessible, inclusive products and digital experiences at Upstatement for a variety of clients.
+        Fast-forward to today, and I’ve had the opportunity to work at a tech publication, a government organization, and various freelance projects. My main focus these days is developing responsive and user-friendly web applications using the MERN and MEVN stacks, with a strong emphasis on creating seamless digital experiences for users.
         </p>
         <p className='hidden1 logo'>
-        I also recently launched a course that covers everything you need to build a web app with the Spotify API using Node & React.
+        I recently launched ShopEase, an e-commerce app built with the MERN stack, featuring admin-controlled order management and secure user authentication for a seamless shopping experience.
         </p>
         <div className='hidden1 logo flex leading-loose mt-5'>
           <ul className="list-disc">
