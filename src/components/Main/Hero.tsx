@@ -6,7 +6,7 @@ const Hero = () => {
     
 
   return (
-    <div className="min-h-[95vh]">
+    <div className="min-h-[95vh] w-[100%]">
         <div className='hidden1 logo text-primary-color font-mono font-extralight'>Hi, my name is</div>
         <div className='bigHeading hidden1 logo text-6xl text-heading-color mt-4 font-extrabold'>
             Ali Azhar.

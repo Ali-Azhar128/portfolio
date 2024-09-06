@@ -25,7 +25,7 @@ const MainIntro = () => {
         }, 4000)
     }, [])
   return (
-    <div className='text-white m-auto w-[100%] md:w-[80%] mt-32 flex flex-col items-start'>
+    <div className='text-white m-auto w-[100%] box-border md:w-[80%] mt-32 flex flex-col items-start'>
         <Hero/>
         <AboutMe/>
         <AboutWork/>

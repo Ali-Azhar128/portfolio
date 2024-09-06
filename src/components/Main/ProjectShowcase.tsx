@@ -22,12 +22,12 @@ const ProjectShowcase: React.FC<ProjectShowcaseProps> = ({ name, description, pa
   return (
   
 
-        <div className="mt-14  grid grid-cols-12 relative min-h-[100%} flex items-center" >
-            <div className={`contentArea flex flex-col justify-center min-h-full md:h-fit box-border p-4 md:bg-transparent bg-[#112240] opacity-90 md:opacity-100 row-span-full absolute z-20 sm:col-start-1 sm:col-span-full  ${mdClasses} ${lgClasses} ${colSpanClasses} ${textAlignClasses}`}>
+        <div className="mt-14  grid grid-cols-12 relative h-max flex items-center" >
+            <div className={`contentArea flex flex-col justify-center min-h-full md:h-fit box-border p-4 md:bg-transparent bg-[#112240] opacity-90 md:opacity-100 row-span-full z-20 sm:col-start-1 sm:col-span-full  ${mdClasses} ${lgClasses} ${colSpanClasses} ${textAlignClasses}`}>
                 <p className="text-primary-color text-xs font-mono mb-1">Featured Project</p>
                 <Link href={linkToProject} target="_blank" className="text-2xl font-bold text-heading-color mb-3 cursor-pointer hover:text-primary-color transition-colors duration-150">{name}</Link>
-                <div className="md:shadow-lg min-w-fit md:bg-[#112240] rounded-md md:py-6 md:px-4 text-[#8892af]">
-                    <p>{description}</p>
+                <div className="md:shadow-lg min-w-fit min-h-10 md:bg-[#112240] rounded-md md:py-6 md:px-4 text-[#8892af]">
+                    <p className="min-h-fit">{description}</p>
                 </div>
                 <ul className={`flex ${leftAligned ? 'justify-end' : 'justify-start'} text-sm font-mono space-x-6 mt-2 text-[#8892af]`}>
                     {technologies.map((el) => {
@@ -43,11 +43,11 @@ const ProjectShowcase: React.FC<ProjectShowcaseProps> = ({ name, description, pa
                     </Link>
                 </div>
             </div>
-            <div className={`projectImage justify-start relative z-0 sm:col-start-1 sm:col-span-full ${leftAligned ? 'md:col-start-1' : 'md:col-start-6'} ${leftAligned ? 'md:col-span-8': 'md:col-span-full'} overflow-hidden w-full h-auto`}>
+            <div className={`projectImage h-full justify-start relative z-0 sm:col-start-1 sm:col-span-full ${leftAligned ? 'md:col-start-1' : 'md:col-start-6'} ${leftAligned ? 'md:col-span-8': 'md:col-span-full'} overflow-hidden w-full h-auto`}>
                 
-                <div className={`projectImgWrapper  relative flex items-center`}>
-                    <Link target="_blank" className="flex w-fit" href={linkToProject}>
-                        <img src={path} alt="Project" className="h-full object-contain grayscale" />
+                <div className={`projectImgWrapper h-full relative flex items-center`}>
+                    <Link target="_blank" className="flex  w-fit" href={linkToProject}>
+                        <img src={path} alt="Project" className=" grayscale" />
                     </Link>
                 </div>
             </div>

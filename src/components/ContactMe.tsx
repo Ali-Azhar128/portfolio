@@ -17,7 +17,7 @@ const ContactMe = () => {
   const subject = 'Hello!';
   const body = 'I would like to get in touch with you.';
   return (
-    <div className='hidden1 logo w-full h-[80vh] max-w-[50%] m-auto flex flex-col justify-center items-center space-y-5' ref={sectionRef}>
+    <div className='hidden1 logo w-full min-h-[80vh] max-w-[50%] m-auto flex flex-col justify-center items-center space-y-5' ref={sectionRef}>
         <p className='text-primary-color font-mono'><span className='text-sm text-primary-color font-thin'>04. </span>What's Next?</p>
         <p className='contactHeading text-heading-color text-6xl font-semibold font-calibre'>Get In Touch</p>
         <p className='text-[#8892af] font-calibre text-center text-lg'>I’m currently exploring new opportunities, and my inbox is always open. Whether you have a role to discuss or just want to connect, feel free to reach out, and I’ll do my best to get back to you!</p>

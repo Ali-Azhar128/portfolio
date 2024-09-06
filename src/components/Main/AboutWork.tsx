@@ -21,8 +21,8 @@ const AboutWork = () => {
       <div className='text-[#8892af] w-full'>
         <Heading num='02.' heading="Where I've Worked"/>
       </div>
-      <div className='hidden1 logo flex flex-col lg:flex-row items-start space-x-4'>
-        <ul className='flex lg:flex-col min-w-fit text-nowrap mb-6'>
+      <div className='hidden1 logo flex flex-col lg:flex-row items-start space-x-4 w-full overflow-hidden'>
+        <ul className='tabList flex lg:flex-col w-full whitespace-nowrap text-nowrap mb-6 overflow-x-auto'>
             {Exp.map((el) => {
                 return <li key={el.id}>
                 <div onClick={() => {

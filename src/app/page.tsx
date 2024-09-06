@@ -8,7 +8,7 @@ const page =() => {
 
   
   return (
-    <>
+    <div className="flex flex-col max-w-[100%]">
       <Hexagon />
       <Navbar/>
       <div className="mx-10 mb-14">
@@ -18,7 +18,7 @@ const page =() => {
 
       </div>
     
-    </>
+    </div>
     
   )
 }

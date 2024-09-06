@@ -372,3 +372,9 @@ nav{
 }
 
 
+
+.projectImage{
+  grid-area: 1 / 6 / -1 / -1;
+}
+
+
