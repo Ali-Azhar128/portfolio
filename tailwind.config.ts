@@ -8,8 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      boxShadowNavy: {
-        'custom-navy': '0 10px 30px -10px rgba(10, 25, 47, 0.85)',
+      backdropFilter: {
+        'none': 'none',
+        'blur': 'blur(20px)',
       },
       fontFamily: {
         'calibre': ['Calibre', 'sans-serif'],

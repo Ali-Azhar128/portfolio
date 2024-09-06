@@ -59,7 +59,7 @@ const Navbar = () => {
   }, [lastScrollY]);
 
   return (
-    <nav className={`nav flex z-40 py-3 ${isAtTop ? '' : 'shadow-lg'} justify-between w-full px-12 align-middle font-mono fixed top-0 transition-all duration-300 ${showNavbar ? 'translate-y-0' : '-translate-y-full'}`}>
+    <nav className={`nav flex z-40 py-3 ${isAtTop ? '' : 'shadow-lg'} justify-between w-full px-12 align-middle font-mono fixed top-0 transition-transform duration-300 ${showNavbar ? 'translate-y-0' : '-translate-y-full'}`}>
         <div className="logo">
             <svg className="hepta" viewBox="0 0 100 100">
                 <polygon points="50,1 93,25 93,75 50,99 7,75 7,25" />
