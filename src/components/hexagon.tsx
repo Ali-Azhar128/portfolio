@@ -5,6 +5,7 @@ const Hexagon = () => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const container = containerRef.current;
 
     const timer = setTimeout(() => {
