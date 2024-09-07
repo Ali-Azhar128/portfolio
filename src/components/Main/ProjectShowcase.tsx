@@ -43,7 +43,7 @@ const ProjectShowcase: React.FC<ProjectShowcaseProps> = ({ name, description, pa
                     </Link>
                 </div>
             </div>
-            <div className={`projectImage h-full justify-start relative z-0 sm:col-start-1 sm:col-span-full ${leftAligned ? 'md:col-start-1' : 'md:col-start-6'} ${leftAligned ? 'md:col-span-8': 'md:col-span-full'} overflow-hidden w-full h-auto`}>
+            <div className={`projectImage justify-start relative z-0 sm:col-start-1 sm:col-span-full ${leftAligned ? 'md:col-start-1' : 'md:col-start-6'} ${leftAligned ? 'md:col-span-8': 'md:col-span-full'} overflow-hidden w-full h-auto`}>
                 
                 <div className={`projectImgWrapper h-full relative flex items-center`}>
                     <Link target="_blank" className="flex  w-fit" href={linkToProject}>
