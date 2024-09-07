@@ -22,7 +22,13 @@ const MyWork = () => {
 
   return (
     <div className="hidden1 logo w-[95%] min-h-[80vh] mx-auto flex flex-col" ref={sectionRef}>
-        <Heading num="03." heading="Some Things I've Built"/>
+        <div className="flex items-center space-x-4 min-h-full">
+        <p className="hidden1 logo font-mono text-xl text-primary-color font-light">03.</p>
+        <p className="heading hidden1 logo text-heading-color whitespace-nowrap text-xl font-bold min-w-fit">Some Things I've Built</p>
+        <div className='hidden1 logo pt-0 w-[40%] h-[1px] bg-gray-600'>
+            
+        </div>
+    </div>
 
         <ProjectShowcase name="ShopEase" description="ShopEase is a full-stack e-commerce platform I built to master the MERN stack. Unlike basic tutorials, this project dives deep, covering everything from MongoDB integration to advanced features like admin order management. By the end, I deployed a fully functional store that highlights my expertise and serves as a standout piece in my portfolio." path="/assets/Shop-Ease.png" linkToGithub="https://github.com/Ali-Azhar128" linkToProject="https://shopease-2wtu.onrender.com" technologies={['React.js', 'MongoDB', 'Express', 'JWT']} leftAligned={true}/>
         <div className="mt-4 md:mt-32"></div>

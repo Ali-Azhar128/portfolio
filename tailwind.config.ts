@@ -16,7 +16,7 @@ const config: Config = {
         'calibre': ['Calibre', 'sans-serif'],
       },
       screens: {
-        sm: '400px', // Change the sm breakpoint to 510px
+        sm: '240px', // Change the sm breakpoint to 510px
       },
       colors: {
         'primary-color': '#64ffda',

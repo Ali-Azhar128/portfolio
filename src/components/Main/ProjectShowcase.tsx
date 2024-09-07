@@ -23,13 +23,13 @@ const ProjectShowcase: React.FC<ProjectShowcaseProps> = ({ name, description, pa
   
 
         <div className="mt-14  grid grid-cols-12 relative h-max flex items-center" >
-            <div className={`contentArea flex flex-col justify-center min-h-full md:h-fit box-border p-4 md:bg-transparent bg-[#112240] opacity-90 md:opacity-100 row-span-full z-20 sm:col-start-1 sm:col-span-full  ${mdClasses} ${lgClasses} ${colSpanClasses} ${textAlignClasses}`}>
+            <div className={`contentArea h-full rounded-md flex flex-col justify-center min-h-full md:h-fit box-border p-4 md:bg-transparent bg-[#112240] opacity-90 md:opacity-100 row-span-full z-20 sm:col-start-1 sm:col-span-full  ${mdClasses} ${lgClasses} ${colSpanClasses} ${textAlignClasses}`}>
                 <p className="text-primary-color text-xs font-mono mb-1">Featured Project</p>
                 <Link href={linkToProject} target="_blank" className="text-2xl font-bold text-heading-color mb-3 cursor-pointer hover:text-primary-color transition-colors duration-150">{name}</Link>
                 <div className="md:shadow-lg min-w-fit min-h-10 md:bg-[#112240] rounded-md md:py-6 md:px-4 text-[#8892af]">
                     <p className="min-h-fit">{description}</p>
                 </div>
-                <ul className={`flex ${leftAligned ? 'justify-end' : 'justify-start'} text-sm font-mono space-x-6 mt-2 text-[#8892af]`}>
+                <ul className={`flex ${leftAligned ? 'justify-end' : 'justify-start'} overflow-x-auto w-full text-sm font-mono space-x-6 mt-2 text-[#8892af]`}>
                     {technologies.map((el) => {
                         return <li key={el}>{el}</li>
                     })}
