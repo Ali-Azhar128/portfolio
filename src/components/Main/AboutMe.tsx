@@ -49,10 +49,6 @@ const AboutMe = () => {
             <BiRightArrow className="mr-2 text-xs text-primary-color" />
               Node.js
             </li>
-            <li className="flex items-center">
-            <BiRightArrow className="mr-2 text-xs text-primary-color" />
-              Nest.js
-            </li>
           </ul>
           <ul className='justify-self-center mx-auto'>
             <li className="flex items-center">
